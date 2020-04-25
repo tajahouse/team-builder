@@ -15,8 +15,8 @@ const Forms = ({ addNewMember }) => {
         console.log(event)
         addNewMember(teamMember);
         // setTeamList([...teamList, teamMember])
-        // setTeamMember({ name: ""})
-        // document.getElementById("form").reset()
+        setTeamMember({ name: "", email:"", role:""})
+        document.getElementById("form").reset()
     };
     
     return(
