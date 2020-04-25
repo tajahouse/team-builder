@@ -2,39 +2,37 @@ import React, { useState } from 'react';
 import './App.css';
 
   const names = [
-    "Laura",
-    "Sidney",
-    "Derwin",
-    "Taja",
-    "Angelia",
-    "Lazurus",
-    "Jucobie",
+    {name:"Laura"},
+    {name:"Sidney"},
+    {name:"Derwin"},
+    {name:"Taja"},
+    {name:"Angelia"},
+    {name:"Lazurus"},
+    {name:"Jucobie"},
   ];
 
 function App() {
   const[teamMember, setTeamMember] = useState({name: ""});
   const[teamList, setTeamList] = useState(names);
-  const handleChanges = event =>{
+  const handleChanges = event =>{   
     setTeamMember({ name: event.target.value });
-    console.log({event});
+    console.log(teamMember);
+;
   };
-  const addNewName = member =>{
-    const newName ={
-      id:Date.now(),
-      name: member.name
-    };
-    setTeamMember([...teamMember, newName])
-  }
+
 
   const submitForm = event => {
     event.preventDefault();
-    addNewName(teamMember);
+    console.log(event)
+    setTeamList([...teamList, teamMember])
+    setTeamMember({ name: ""})
+    document.getElementById("form").reset()
   };
 
 
   return (
     <div className="App">
-    <form onSubmit ={submitForm}>
+    <form onSubmit ={submitForm} id="form">
       <label htmlFor ="name">Name</label>
       <input 
         id="name" 
@@ -47,8 +45,8 @@ function App() {
     </form>
     <div>
       <ul>
-        {teamList.map(name =>{
-          return <li key={name}>{name}</li>;
+        {teamList.map(person =>{
+          return <li key={person.name}>{person.name}</li>;
         })}
       </ul>
     </div>
