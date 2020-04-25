@@ -18,7 +18,9 @@ function App() {
   const addNewMemeber = person =>{
     const newMember = {
       id: Date.now(),
-      name: person.name
+      name: person.name,
+      email: person.email,
+      role: person.role
     }
     setTeamList([...names, newMember])
   }
