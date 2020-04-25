@@ -5,7 +5,7 @@ const Forms = ({ addNewMember }) => {
     const[teamMember, setTeamMember] = useState({name: "", email:"", role:""});
 
     const handleChanges = event =>{   
-        setTeamMember({ name: event.target.value });
+        setTeamMember({ ...teamMember, [event.target.name]:event.target.value });
         console.log(teamMember);
     
       };
