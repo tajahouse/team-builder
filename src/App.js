@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
+import Forms from './Forms';
+import Team from "./Team";
 
   const names = [
     {name:"Laura"},
@@ -32,24 +34,8 @@ function App() {
 
   return (
     <div className="App">
-    <form onSubmit ={submitForm} id="form">
-      <label htmlFor ="name">Name</label>
-      <input 
-        id="name" 
-        onChange={handleChanges}
-        type="text" 
-        placeholder="Team member name"
-        value={teamMember.name}
-      />
-      <button type="submit">Add Name</button>
-    </form>
-    <div>
-      <ul>
-        {teamList.map(person =>{
-          return <li key={person.name}>{person.name}</li>;
-        })}
-      </ul>
-    </div>
+    <Forms/ >
+    <Team name={name} />
     </div>
   );
 }
