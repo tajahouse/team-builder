@@ -4,38 +4,32 @@ import Forms from './Forms';
 import Team from "./Team";
 
   const names = [
-    {name:"Laura"},
-    {name:"Sidney"},
-    {name:"Derwin"},
-    {name:"Taja"},
-    {name:"Angelia"},
-    {name:"Lazurus"},
-    {name:"Jucobie"},
+    {
+      id:1,
+      name:"Laura",
+      email:"laura@fake.email",
+      role: "Manager"
+    }
+
   ];
 
 function App() {
-  const[teamMember, setTeamMember] = useState({name: ""});
   const[teamList, setTeamList] = useState(names);
-  const handleChanges = event =>{   
-    setTeamMember({ name: event.target.value });
-    console.log(teamMember);
-;
-  };
-
-
-  const submitForm = event => {
-    event.preventDefault();
-    console.log(event)
-    setTeamList([...teamList, teamMember])
-    setTeamMember({ name: ""})
-    document.getElementById("form").reset()
-  };
+  const addNewMemeber = person =>{
+    const newMember = {
+      id: Date.now(),
+      name: person.name
+    }
+    setTeamList([...names, newMember])
+  }
+  
 
 
   return (
     <div className="App">
-    <Forms/ >
-    <Team name={name} />
+      <h1>The Team</h1>
+    <Forms />
+    <Team teamList={teamList} />
     </div>
   );
 }
