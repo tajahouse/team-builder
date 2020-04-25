@@ -41,6 +41,7 @@ function App() {
         onChange={handleChanges}
         type="text" 
         placeholder="Team member name"
+        value={teamMember.name}
       />
       <button type="submit">Add Name</button>
     </form>
