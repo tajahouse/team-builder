@@ -35,6 +35,7 @@ const Forms = ({ addNewMember }) => {
       <lable htmlFor="email">Email</lable>
       <input 
       id="email" 
+      name="email"
       type="email" 
       placeholder="Email Here" 
       value = {teamMember.email} 
@@ -44,6 +45,7 @@ const Forms = ({ addNewMember }) => {
       <lable htmlFor="role">Role</lable>
       <input 
       id="role" 
+      name="role"
       type="text" 
       onChange={handleChanges} 
       placeholder="Team member role" 
