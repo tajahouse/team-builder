@@ -30,6 +30,18 @@ const TheTeam = styled.div`
     margin: 16px auto;
     text-align: left;
 `;
+
+const Button = styled.button`
+    color: palevioletred;
+    background-color:cornflowerblue;
+    font-size: 1em;
+    margin: 1em;
+    padding: 0.25em 1em;
+    border: 2px solid palevioletred;
+    border-radius: 3px;
+    
+`;
+
 const Team = (props) =>{
     return (
         <TeamCard>
@@ -39,6 +51,7 @@ const Team = (props) =>{
                     <H2>Name: {people.name}</H2>
                     <P>Email: {people.email}</P>
                     <P>Role: {people.role}</P>
+                    <Button>Edit</Button>
                 </TheTeam>
             ))}
 
