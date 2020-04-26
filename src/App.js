@@ -23,7 +23,19 @@ const H1 = styled.h1`
       name:"Lacey",
       email: "lacey@fake.email",
       role: "UX Designer"
-    }
+    },
+    {
+      id:3,
+      name:"Latasha",
+      email: "latasha@fake.email",
+      role: "Front-end"
+    },
+    {
+      id:3,
+      name:"James",
+      email: "james@fake.email",
+      role: "Back-end"
+    },
 
   ];
 

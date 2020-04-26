@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const FormWrapper = styled.div`
     display:flex;
     flex-direction: column;
+
 `;
 
 const InputBox = styled.div`
@@ -18,6 +19,9 @@ const Button = styled.button`
   padding: 0.25em 1em;
   border: 2px solid palevioletred;
   border-radius: 3px;
+  &:hover{
+    transform: scale(1.2)
+}
 `;
 
 
@@ -49,7 +53,7 @@ const Forms = ({ addNewMember }) => {
         name="name"
         onChange={handleChanges}
         type="text" 
-        placeholder="Team member name"
+        placeholder="Name Here"
         value={teamMember.name}
       />
       </InputBox>
@@ -73,7 +77,7 @@ const Forms = ({ addNewMember }) => {
       name="role"
       type="text" 
       onChange={handleChanges} 
-      placeholder="Team member role" 
+      placeholder="Role Here" 
       value={teamMember.role}
       />
       </InputBox>

@@ -18,6 +18,7 @@ const TeamCard = styled.div`
 
     display:flex;
     flex-wrap: wrap;
+
 `;
 
 const TheTeam = styled.div`
