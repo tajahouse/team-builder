@@ -10,7 +10,15 @@ const InputBox = styled.div`
     padding-bottom:1em;
 `;
 
-
+const Button = styled.button`
+  color: palevioletred;
+  background-color:cornflowerblue;
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid palevioletred;
+  border-radius: 3px;
+`;
 
 
 const Forms = ({ addNewMember }) => {
@@ -28,7 +36,7 @@ const Forms = ({ addNewMember }) => {
         addNewMember(teamMember);
         // setTeamList([...teamList, teamMember])
         setTeamMember({ name: "", email:"", role:"" })
-        document.getElementById("form").reset()
+        // document.getElementById("form").reset()
     };
     
     return(
@@ -70,7 +78,7 @@ const Forms = ({ addNewMember }) => {
       />
       </InputBox>
 
-      <button type="submit">Add Name</button>
+      <Button type="submit">Add Name</Button>
 
     </form>
         </FormWrapper>

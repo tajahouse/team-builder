@@ -36,7 +36,7 @@ function App() {
       email: person.email,
       role: person.role
     }
-    setTeamList([...names, newMember])
+    setTeamList([...teamList, newMember])
   }
   
 
