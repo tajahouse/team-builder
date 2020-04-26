@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+
 }
 
 .App-logo {
@@ -35,4 +36,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+label{
+  font-family: 'Kanit', sans-serif;
+  color:white;
+  font-size: 1.5em;
+  text-shadow: 3px 3px 3px orange;
 }

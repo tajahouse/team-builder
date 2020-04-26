@@ -1,4 +1,16 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
+
+const FormWrapper = styled.div`
+    display:flex;
+    flex-direction: column;
+`;
+
+const InputBox = styled.div`
+    padding-bottom:1em;
+`;
+
+
 
 
 const Forms = ({ addNewMember }) => {
@@ -15,13 +27,14 @@ const Forms = ({ addNewMember }) => {
         console.log(event)
         addNewMember(teamMember);
         // setTeamList([...teamList, teamMember])
-        setTeamMember({ name: "", email:"", role:""})
+        setTeamMember({ name: "", email:"", role:"" })
         document.getElementById("form").reset()
     };
     
     return(
-        <div>
+        <FormWrapper>
     <form onSubmit ={submitForm} id="form">
+        <InputBox>
       <label htmlFor ="name">Name</label>
       <input 
         id="name" 
@@ -31,8 +44,10 @@ const Forms = ({ addNewMember }) => {
         placeholder="Team member name"
         value={teamMember.name}
       />
+      </InputBox>
 
-      <lable htmlFor="email">Email</lable>
+      <InputBox>
+      <label htmlFor="email">Email</label>
       <input 
       id="email" 
       name="email"
@@ -41,8 +56,10 @@ const Forms = ({ addNewMember }) => {
       value = {teamMember.email} 
       onChange={handleChanges} 
       />
+      </InputBox>
 
-      <lable htmlFor="role">Role</lable>
+      <InputBox>
+      <label htmlFor="role">Role</label>
       <input 
       id="role" 
       name="role"
@@ -51,11 +68,12 @@ const Forms = ({ addNewMember }) => {
       placeholder="Team member role" 
       value={teamMember.role}
       />
+      </InputBox>
 
       <button type="submit">Add Name</button>
 
     </form>
-        </div>
+        </FormWrapper>
     )
 }
 
