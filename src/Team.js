@@ -17,7 +17,7 @@ const P = styled.p`
 const TeamCard = styled.div`
 
     display:flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
 `;
 
 const TheTeam = styled.div`
