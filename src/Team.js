@@ -15,6 +15,12 @@ const P = styled.p`
 `;
 
 const TeamCard = styled.div`
+
+    display:flex;
+    justify-content: space-around;
+`;
+
+const TheTeam = styled.div`
     background:orange;
     box-shadow: 0 5px 10px grey;
     width: 100%;
@@ -28,11 +34,11 @@ const Team = (props) =>{
         <TeamCard>
 
             {props.teamList.map(people => (
-                <div key={people.id}>
+                <TheTeam key={people.id}>
                     <H2>Name: {people.name}</H2>
                     <P>Email: {people.email}</P>
                     <P>Role: {people.role}</P>
-                </div>
+                </TheTeam>
             ))}
 
         </TeamCard>
